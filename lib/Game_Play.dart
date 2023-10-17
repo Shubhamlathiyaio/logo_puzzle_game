@@ -29,7 +29,8 @@ List ans = [
   "TOYOTA",
   "VISA",
   "VOLKSWAGEN",
-  "WIKIPEDIA"
+  "WIKIPEDIA"  ,
+  "TIKMARK"
 ];
 
 class _gameplayState extends State<gameplay> {
@@ -101,7 +102,7 @@ class _gameplayState extends State<gameplay> {
         print(widget.ind);
         size=ans[widget.ind].length;
         qna();
-        // setState(() {});
+        setState(() {});
       },
       controller:PageController(initialPage: widget.ind),
       itemCount: all.length,
@@ -198,9 +199,7 @@ class _gameplayState extends State<gameplay> {
                 itemBuilder: (context, ind) {
                   return Visibility(
                     visible: b[ind],
-                    replacement: Container(
-                      color: Colors.black,
-                    ),
+                    replacement: Container(),
                     child: InkWell(
                       onTap: () {
                         if (uans.contains('')) {
