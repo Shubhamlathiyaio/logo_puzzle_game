@@ -43,6 +43,14 @@ class _levelState extends State<level> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(centerTitle: true,title:Text('LEVEL'),actions: [
+        Column(
+          children: [
+            Text('Pints',style: TextStyle(fontSize: 24)),
+            Text('${Home.prefs!.getInt('point')??0}',style: TextStyle(fontSize: 28),)
+          ],
+        )
+      ],),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, mainAxisSpacing: 10, crossAxisSpacing: 10),
