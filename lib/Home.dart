@@ -21,7 +21,6 @@ class _HomeState extends State<Home> {
   prafer()
   async {
     Home.prefs = await SharedPreferences.getInstance();
-    // for(int i=0;i<all.length;i++) Home.prefs?.setString('$i', 'yes')??'';
   }
 
   @override
